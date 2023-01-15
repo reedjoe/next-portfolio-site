@@ -1,6 +1,7 @@
 .mainContentContainer {
   margin: auto;
   margin-top: 50px;
+  max-width: 850px;
 }
 
 
