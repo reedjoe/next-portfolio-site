@@ -8,5 +8,5 @@ const ProjectList: FunctionComponent<ProjectListProps> = (props: ProjectListProp
             return <Project key={project.id} {...project} />
         })}
     </>
-)
+);
 export default ProjectList;

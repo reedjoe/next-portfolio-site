@@ -1,19 +1,19 @@
 import styles from '../../styles/Layout.module.css';
 import NavbarItem from './navbar-item';
-import { INavbarItem } from './navbar.interface';
+import { INavbarItem } from './layout.interface';
 
 const navbarItems: INavbarItem[] = [
   { id: '1', label: 'Home', href: '/' },
-  { id: '2', label: 'About', href: '' },
-  { id: '3', label: 'Projects', href: '' },
-  { id: '4', label: 'Contact', href: '' },
+  { id: '2', label: 'About', href: '/about' },
+  { id: '3', label: 'Projects', href: '/projects' },
+  { id: '4', label: 'Contact', href: '/contact' },
 ];
 
 const Navbar = () => (
-    <div className={styles.navWrapper}>
-      {navbarItems.map(item => {
-            return <NavbarItem key={item.id} {...item} />
-        })}
-    </div>
-  )
+  <div className={styles.navWrapper}>
+    {navbarItems.map(item => {
+          return <NavbarItem key={item.id} {...item} />
+      })}
+  </div>
+);
 export default Navbar;

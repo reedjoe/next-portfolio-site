@@ -14,5 +14,5 @@ const Project = (props: IProject) => (
             {!!props.image ? <img className={styles.image} src={props.image.path} alt={props.image.alt} /> : null}
         </div>
     </>
-)
+);
 export default Project;

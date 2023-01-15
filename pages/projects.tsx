@@ -2,11 +2,11 @@ import Layout from '../components/layout/layout'
 import { projectData } from '../components/project/project-data'
 import ProjectList from '../components/project/project-list'
 
-export default function Home() {
+export default function Projects() {
   return (
     <>
-      <Layout pageTitle='Portfolio - Home'>
-        <div>Home page working</div>
+      <Layout pageTitle='Portfolio - Projects'>
+        <ProjectList projects={projectData}></ProjectList>
       </Layout>
     </>
   )
