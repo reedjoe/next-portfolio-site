@@ -1,8 +1,10 @@
-const Layout = ({ children }) => (
+import styles from '../../styles/Layout.module.css';
+import Navbar from "./navbar";
+
+const Layout = ({ children }: any) => (
     <div>
-      {/* <Navbar /> */}
-      <div>Test</div>
-      <div className="main-container container">
+      <Navbar />
+      <div className={styles.mainContentContainer}>
         {children}
       </div>
     </div>

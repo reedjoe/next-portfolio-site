@@ -2,8 +2,13 @@ export interface IProject {
     id: string;
     title: string;
     description: string;
-    imagePath?: string;
+    image?: IProjectImage;
     url?: string;
+};
+
+export interface IProjectImage {
+    path: string;
+    alt: string;
 };
 
 export type ProjectListProps = {

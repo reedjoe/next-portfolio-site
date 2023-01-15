@@ -5,7 +5,7 @@ import { ProjectListProps } from "./project.interface";
 const ProjectList: FunctionComponent<ProjectListProps> = (props: ProjectListProps) => (
     <>
         {props.projects.map(project => {
-            return <Project {...project} />
+            return <Project key={project.id} {...project} />
         })}
     </>
 )

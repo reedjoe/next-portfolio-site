@@ -1,0 +1,25 @@
+.mainContentContainer {
+  margin-top: 50px;
+}
+
+
+
+
+.navWrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 50px;
+  background-color: #d18214;
+  padding: 10px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.navItem {
+  color: orange;
+}

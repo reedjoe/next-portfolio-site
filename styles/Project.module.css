@@ -1,0 +1,20 @@
+.projectWrapper {
+  max-width: 250px;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #27d5e2ba;
+  padding: 20px;
+  color: black;
+}
+
+.projectTitle {
+  color: orange;
+}
+
+.description {
+  padding-top: 10px;
+}
+
+.image {
+  padding-top: 10px;
+}
