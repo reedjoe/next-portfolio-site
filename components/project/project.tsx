@@ -13,9 +13,26 @@ const getImagePosition = (pos?: string): string => {
     }
 }
 
+const getProjectSize = (size: string): string => {
+    switch(size) {
+        case 'small':
+            return styles.projectSmall;
+        case 'medium':
+            return styles.projectMedium;
+        case 'large':
+            return styles.projectLarge;
+        case 'x-large':
+            return styles.projectXLarge;
+        default:
+            return '';
+    }
+}
+
 const Project = (props: IProject) => (
     <>
-        <div className={`${styles.projectWrapper} ${getImagePosition(props.image?.position)}`}>
+        <div className={`${styles.projectWrapper}
+            ${getImagePosition(props.image?.position)}
+            ${getProjectSize(props.size)}`}>
             <div>
                 <h2 className={styles.projectTitle}>
                     {props.title}

@@ -1,12 +1,11 @@
 .projectWrapper {
-  max-width: 600px;
   margin: auto;
   margin-top: 30px;
   background-color: #27d5e2ba;
   padding: 20px;
   color: black;
   display: grid;
-  gap: 10px;
+  gap: 18px;
   grid-template-columns: auto auto;
   grid-template-rows: auto;
   grid-template-areas: 
@@ -14,7 +13,27 @@
     "image image";
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 850px) {
+  .projectWrapper {
+    width: 100%;
+  }
+
+  .projectSmall {
+    max-width: 250px;
+  }
+
+  .projectMedium {
+    max-width: 440px;
+  }
+
+  .projectLarge {
+    max-width: 600px;
+  }
+
+  .projectXLarge {
+    max-width: 800px;
+  }
+
   .imageLeft {
     grid-template-areas: 
       "image detail"
@@ -42,7 +61,7 @@
   grid-area: image;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 850px) {
   .image {
     width: var(--image-width);
     padding-top: 10px;

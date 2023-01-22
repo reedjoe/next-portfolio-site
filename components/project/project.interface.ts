@@ -1,5 +1,6 @@
 export interface IProject {
     id: string;
+    size: 'small' | 'medium' | 'large' | 'x-large';
     title: string;
     description: string;
     image?: IProjectImage;
