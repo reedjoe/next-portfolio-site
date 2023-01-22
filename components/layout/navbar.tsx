@@ -10,10 +10,16 @@ const navbarItems: INavbarItem[] = [
 ];
 
 const Navbar = () => (
-  <div className={styles.navWrapper}>
-    {navbarItems.map(item => {
-          return <NavbarItem key={item.id} {...item} />
-      })}
-  </div>
+  <>
+    <div className={styles.navHeader}>
+      <h1>Harry Lenton</h1>
+      <h1>Artist</h1>
+    </div>
+    <div className={styles.navSticky}>
+      {navbarItems.map(item => {
+            return <NavbarItem key={item.id} {...item} />
+        })}
+    </div>
+  </>
 );
 export default Navbar;
