@@ -9,6 +9,8 @@ export interface IProject {
 export interface IProjectImage {
     path: string;
     alt: string;
+    width: number;
+    position: 'left' | 'right' | 'bottom';
 };
 
 export type ProjectListProps = {

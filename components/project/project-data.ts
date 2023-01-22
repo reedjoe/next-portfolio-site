@@ -12,7 +12,9 @@ export const projectData: IProject[] = [
         description: 'This is an example description for a 3D animation project',
         image: {
             path: 'next.svg',
-            alt: 'Example desciption for image'
+            alt: 'Example desciption for image',
+            width: 200,
+            position: 'bottom'
         }
     },
     {
@@ -25,7 +27,13 @@ export const projectData: IProject[] = [
         id: '4',
         title: 'Another project',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        url: 'www.google.com'
+        url: 'www.google.com',
+        image: {
+            path: 'hawk_1.avif',
+            alt: 'Example desciption for hawk 1',
+            width: 200,
+            position: 'left'
+        }
     },
     {
         id: '5',
@@ -37,7 +45,13 @@ export const projectData: IProject[] = [
         id: '6',
         title: 'Another project',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        url: 'www.google.com'
+        url: 'www.google.com',
+        image: {
+            path: 'hawk_4.avif',
+            alt: 'Example desciption for hawk 4',
+            width: 400,
+            position: 'right'
+        }
     },
     {
         id: '7',
