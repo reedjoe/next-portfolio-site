@@ -13,9 +13,9 @@
 
 .navHeader {
   width: 100%;
-  background-color: #d18214;
+  background-color: #2c4d77;
   padding: 10px;
-  color: black;
+  color: #ffffff;
   height: 40px;
   font-size: 14px;
   display: flex;
@@ -27,9 +27,9 @@
 
 .navSticky {
   width: 100%;
-  background-color: #d18214;
+  background-color: #2c4d77;
   padding: 10px;
-  color: black;
+  color: #ffffff;
   height: 50px;
   position: sticky;
   top: 0;
@@ -41,7 +41,7 @@
 }
 
 .navItem {
-  color: orange;
+  color: #ffffff;
 }
 
 @media only screen and (min-width: 850px) {

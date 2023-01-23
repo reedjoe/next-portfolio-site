@@ -12,7 +12,7 @@ const navbarItems: INavbarItem[] = [
 const Navbar = () => (
   <>
     <div className={styles.navHeader}>
-      <h1>Harry Lenton</h1>
+      <h1>Placeholder</h1>
       <h1>Artist</h1>
     </div>
     <div className={styles.navSticky}>

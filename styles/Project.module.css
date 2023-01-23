@@ -1,9 +1,9 @@
 .projectWrapper {
   margin: auto;
   margin-top: 30px;
-  background-color: #27d5e2ba;
+  background-color: #5193B9;
   padding: 20px;
-  color: black;
+  color: #110f12;
   display: grid;
   gap: 18px;
   grid-template-columns: auto auto;
@@ -47,8 +47,13 @@
   }
 }
 
+.projectHeader {
+  display: inline-flex;
+}
+
 .projectTitle {
-  color: orange;
+  color: #000000;
+  padding-right: 15px;
 }
 
 .description {
