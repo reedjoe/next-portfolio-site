@@ -63,9 +63,11 @@ const Project = (props: IProject) => (
                         </a>
                         : null}
                 </div>
-                <p className={styles.description}>
-                    {props.description}
-                </p>
+                {props.description.map(description => {
+                    return <p className={styles.description}>
+                        {description}
+                    </p>
+                })}
             </div>
             {!!props.image
                 ? <img className={styles.image}

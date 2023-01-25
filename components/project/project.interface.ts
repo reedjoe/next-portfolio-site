@@ -3,7 +3,7 @@ export interface IProject {
     size: 'small' | 'medium' | 'large' | 'x-large' | 'full';
     position: 'left' | 'right';
     title: string;
-    description: string;
+    description: string[];
     image?: IProjectImage;
     url?: string;
 };
