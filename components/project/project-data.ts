@@ -3,13 +3,21 @@ import { IProject } from "./project.interface";
 export const projectData: IProject[] = [
     {
         id: '1',
-        size: 'small',
+        size: 'large',
+        position: 'right',
         title: 'Example 2D animation',
-        description: 'This is an example description for a 2D animation project'
+        description: 'This is an example description for a 2D animation project',
+        image: {
+            path: 'hawk_3.avif',
+            alt: 'Example desciption for hawk 2',
+            width: 200,
+            position: 'right'
+        }
     },
     {
         id: '2',
         size: 'medium',
+        position: 'left',
         title: 'Example 3D animation',
         description: 'This is an example description for a 3D animation project',
         image: {
@@ -22,6 +30,7 @@ export const projectData: IProject[] = [
     {
         id: '3',
         size: 'small',
+        position: 'left',
         title: 'Another project',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
         url: 'www.google.com'
@@ -29,6 +38,7 @@ export const projectData: IProject[] = [
     {
         id: '4',
         size: 'large',
+        position: 'right',
         title: 'Another project',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
         url: 'www.google.com',
@@ -42,13 +52,15 @@ export const projectData: IProject[] = [
     {
         id: '5',
         size: 'small',
+        position: 'left',
         title: 'Another project',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
         url: 'www.google.com'
     },
     {
         id: '6',
-        size: 'x-large',
+        size: 'full',
+        position: 'left',
         title: 'Another project',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
         url: 'www.google.com',
@@ -62,6 +74,7 @@ export const projectData: IProject[] = [
     {
         id: '7',
         size: 'medium',
+        position: 'right',
         title: 'Another project',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
         url: 'www.google.com'
@@ -69,6 +82,7 @@ export const projectData: IProject[] = [
     {
         id: '8',
         size: 'small',
+        position: 'left',
         title: 'Another project',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
         url: 'www.google.com'

@@ -1,6 +1,22 @@
+.projectList {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectContainer {
+  margin-top: 30px;
+}
+
+.projectLeft {
+  align-self: flex-start;
+}
+
+.projectRight {
+  align-self: flex-end;
+}
+
 .projectWrapper {
   margin: auto;
-  margin-top: 30px;
   background-color: #5193B9;
   padding: 20px;
   color: #110f12;
@@ -19,19 +35,23 @@
   }
 
   .projectSmall {
-    max-width: 250px;
+    max-width: 300px;
   }
 
   .projectMedium {
-    max-width: 440px;
+    max-width: 480px;
   }
 
   .projectLarge {
-    max-width: 600px;
+    max-width: 650px;
   }
-
+  
   .projectXLarge {
     max-width: 800px;
+  }
+
+  .projectFull {
+    max-width: unset;
   }
 
   .imageLeft {

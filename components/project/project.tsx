@@ -1,6 +1,16 @@
 import styles from '../../styles/Project.module.css';
 import { IProject } from './project.interface';
 
+const getProjectPosition = (pos: string): string => {
+    switch(pos) {
+        case 'right':
+            return styles.projectRight;
+        case 'left':
+        default:
+            return styles.projectLeft;
+    }
+}
+
 const getImagePosition = (pos?: string): string => {
     switch(pos) {
         case 'left':
@@ -23,13 +33,15 @@ const getProjectSize = (size: string): string => {
             return styles.projectLarge;
         case 'x-large':
             return styles.projectXLarge;
+        case 'full':
         default:
-            return '';
+            return styles.projectFull;
     }
 }
 
 const Project = (props: IProject) => (
-    <>
+    <div className={`${styles.projectContainer}
+        ${getProjectPosition(props.position)}`}>
         <div className={`${styles.projectWrapper}
             ${getImagePosition(props.image?.position)}
             ${getProjectSize(props.size)}`}>
@@ -62,6 +74,6 @@ const Project = (props: IProject) => (
                     alt={props.image.alt} />
                 : null}
         </div>
-    </>
+    </div>
 );
 export default Project;
