@@ -37,7 +37,7 @@ export const projectData: IProject[] = [
         position: 'left',
         title: 'Another project',
         description: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'],
-        url: 'www.google.com'
+        url: 'https://google.com'
     },
     {
         id: '4',
@@ -62,7 +62,7 @@ export const projectData: IProject[] = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
             'Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt magna aliqua. Ut enim ad minim veniam',
         ],
-        url: 'www.google.com'
+        url: 'https://google.com'
     },
     {
         id: '6',
@@ -73,7 +73,7 @@ export const projectData: IProject[] = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
             'Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt magna aliqua. Ut enim ad minim veniam',
         ],
-        url: 'www.google.com',
+        url: 'https://google.com',
         image: {
             path: 'hawk_4.avif',
             alt: 'Example desciption for hawk 4',
@@ -87,7 +87,7 @@ export const projectData: IProject[] = [
         position: 'right',
         title: 'Another project',
         description: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'],
-        url: 'www.google.com'
+        url: 'https://google.com'
     },
     {
         id: '8',
@@ -95,6 +95,6 @@ export const projectData: IProject[] = [
         position: 'left',
         title: 'Another project',
         description: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'],
-        url: 'www.google.com'
+        url: 'https://google.com'
     }
 ];
