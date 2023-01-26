@@ -63,6 +63,7 @@ const Project = (props: IProject) => (
                         </a>
                         : null}
                 </div>
+                {/* TODO: add key to mapped elements */}
                 {props.description.map(description => {
                     return <p className={styles.description}>
                         {description}

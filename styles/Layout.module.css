@@ -1,5 +1,5 @@
 .mainContentContainer {
-  margin: 25px 15px;
+  margin: 65px 15px;
   max-width: 850px;
 }
 
@@ -12,32 +12,53 @@
 
 
 .navHeader {
-  width: 100%;
+  width: 100vw;
   background-color: #2c4d77;
   padding: 10px;
   color: #ffffff;
-  height: 40px;
+  height: 54px;
   font-size: 14px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 25px;
+  position: fixed;
+  top: 0;
 }
 
-.navSticky {
+.navToggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  visibility: visible;
+}
+
+.navMain {
   width: 100%;
-  background-color: #2c4d77;
+  background-color: #2c4d77f3;
   padding: 10px;
+  padding-top: 30px;
   color: #ffffff;
-  height: 50px;
-  position: sticky;
-  top: 0;
+  height: 100%;
+  position: fixed;
+  top: 54px;
+  right: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: height 300ms ease, opacity 300ms ease, visibility 300ms ease;
+}
+
+.navMainVisible {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
 }
 
 .navItem {
@@ -48,5 +69,25 @@
   .navHeader {
     height: 80px;
     font-size: 22px;
+    display: flex;
+    top: 0;
+    position: unset;
+  }
+
+  .navToggle {
+    visibility: hidden;
+  }
+
+  .navMain {
+    padding: 10px;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    visibility: visible;
+    opacity: 1;
   }
 }
