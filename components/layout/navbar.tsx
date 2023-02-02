@@ -1,7 +1,7 @@
 import styles from '../../styles/Layout.module.css';
 import NavbarItem from './navbar-item';
 import { INavbarItem } from './layout.interface';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const navbarItems: INavbarItem[] = [
   { id: '1', label: 'Home', href: '/' },
@@ -12,9 +12,19 @@ const navbarItems: INavbarItem[] = [
 
 export default function Navbar() {
   const [isNavExpanded, setNavExpanded] = useState(false);
-  function toggleNavExpanded() {
+
+  function toggleNavExpanded(): void {
     setNavExpanded(!isNavExpanded);
   }
+
+  useEffect(() => {
+    setBodyOverflowY();
+  }, [setBodyOverflowY]);
+
+  function setBodyOverflowY(): void {
+    document.body.style.overflowY = isNavExpanded ? 'hidden' : 'unset';
+  }
+
   return (
     <>
       <div className={styles.navHeader}>
