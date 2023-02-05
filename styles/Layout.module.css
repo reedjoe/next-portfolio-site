@@ -61,6 +61,7 @@
   opacity: 0;
   height: 0;
   transition: height 300ms ease, opacity 300ms ease, visibility 300ms ease;
+  z-index: 999;
 }
 
 .navMainVisible {
