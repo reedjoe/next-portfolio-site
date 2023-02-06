@@ -32,7 +32,7 @@
     width: 90%;
     transform-style: preserve-3d;
     --_t: perspective(2000px) rotateX(-90deg) rotate(180deg) scaleX(-1);
-    animation: r 14s cubic-bezier(0.5, -0.2, 0.5, 1.2) infinite;
+    animation: rotation 14s cubic-bezier(0.5, -0.2, 0.5, 1.2) infinite;
 
     margin-top: 30px;
     margin-left: 1.3rem;
@@ -46,7 +46,7 @@
     }
 }
 
-@keyframes r {
+@keyframes rotation {
     0%, 5% {
         transform: var(--_t) rotate(0deg);
     }
@@ -66,9 +66,6 @@
     /* width: 300px; */
     aspect-ratio: 1; 
     object-fit: cover;
-
-    background-color: #5193B9;
-    padding: 20px;
 }
 
 .rightContainer > div:nth-child(1) {
@@ -90,4 +87,27 @@
       rotate(240deg)
       translateY(28.8675134595%)
       rotateX(90deg);
+}
+
+.sectionContainer {
+    background-color: #5193B9;
+    padding: 20px;
+    overflow: hidden;
+    animation: height 14s cubic-bezier(0.5, -0.2, 0.5, 1.2) infinite;
+    height: 100%;
+}
+
+@keyframes height {
+    0%, 5% {
+        max-height: 300px;
+    }
+    31%, 36% {
+        max-height: 450px;
+    }
+    64%, 69% {
+        max-height: 200px;
+    }
+    94%, 100% {
+        max-height: 300px;
+    }
 }
