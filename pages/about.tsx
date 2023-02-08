@@ -7,9 +7,25 @@ export default function About() {
       <Layout pageTitle='Portfolio - About'>
         <div className={styles.container}>
           <div className={styles.leftContainer}>
-            <h3>Bio</h3>
-            <h3>Education</h3>
-            <h3>Employment</h3>
+            {/* TODO: look at https://codepen.io/nikolamitic/pen/vpNoNq */}
+            <div className={styles.sectionLink}>
+              <span className={styles.sectionLinkStatic}>Bio</span>
+              <div className={styles.sectionLinkDynamic}>
+                <span className={styles.sectionLinkDynamicInner}>Bio</span>
+              </div>
+            </div>
+            <div className={styles.sectionLink}>
+              <span className={styles.sectionLinkStatic}>Education</span>
+              <div className={styles.sectionLinkDynamic}>
+                <span className={styles.sectionLinkDynamicInner}>Education</span>
+              </div>
+            </div>
+            <div className={styles.sectionLink}>
+              <span className={styles.sectionLinkStatic}>Employment</span>
+              <div className={styles.sectionLinkDynamic}>
+                <span className={styles.sectionLinkDynamicInner}>Employment</span>
+              </div>
+            </div>
           </div>
           <div className={styles.rightContainer}>
             <div className={styles.sectionWrapper}>
