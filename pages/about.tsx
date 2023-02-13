@@ -8,6 +8,7 @@ export default function About() {
   const [currentRotation, setCurrentRotation] = useState(0);
   const baseTransform = 'perspective(2000px) rotateX(-90deg) rotate(180deg) scaleX(-1)';
   
+  //TODO: refactor this ugly shit, and add some CSS to indicate which section is selected
   const setSection = (newSection: string) => {
     if (!rightContainerRef.current) {
       return;
@@ -16,34 +17,13 @@ export default function About() {
     let newRotation = currentRotation;
     switch (newSection) {
       case 'bio':
-        switch (currentSection) {
-          case 'education':
-            newRotation = currentRotation + 120;
-            break;
-          case 'employment':
-            newRotation = currentRotation - 120;
-            break;
-        }
+        newRotation = currentSection === 'education' ? currentRotation + 120 : currentRotation - 120;
         break;
       case 'education':
-        switch (currentSection) {
-          case 'bio':
-            newRotation = currentRotation - 120;
-            break;
-          case 'employment':
-            newRotation = currentRotation + 120;
-            break;
-        } 
+        newRotation = currentSection === 'employment' ? currentRotation + 120 : currentRotation - 120;
         break;
       case 'employment':
-        switch (currentSection) {
-          case 'bio':
-            newRotation = currentRotation + 120;
-            break;
-          case 'education':
-            newRotation = currentRotation - 120;
-            break;
-        }
+        newRotation = currentSection === 'bio' ? currentRotation + 120 : currentRotation - 120;
         break;
     }    
 
