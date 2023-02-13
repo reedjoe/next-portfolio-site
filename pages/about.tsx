@@ -4,32 +4,45 @@ import styles from '../styles/About.module.css';
 
 export default function About() {
   const rightContainerRef = useRef<HTMLElement>(null);
+  const bioContainerRef = useRef<HTMLElement>(null);
+  const educationContainerRef = useRef<HTMLElement>(null);
+  const employmentContainerRef = useRef<HTMLElement>(null);
   const [currentSection, setCurrentSection] = useState('bio');
   const [currentRotation, setCurrentRotation] = useState(0);
   const baseTransform = 'perspective(2000px) rotateX(-90deg) rotate(180deg) scaleX(-1)';
   
   //TODO: refactor this ugly shit, and add some CSS to indicate which section is selected
   const setSection = (newSection: string) => {
-    if (!rightContainerRef.current) {
+    if (!rightContainerRef?.current ||
+      !bioContainerRef?.current ||
+      !educationContainerRef?.current ||
+      !employmentContainerRef?.current) {
       return;
     }
 
-    let newRotation = currentRotation;
+    let useForwardRotation;
+    let newMaxHeight;
     switch (newSection) {
       case 'bio':
-        newRotation = currentSection === 'education' ? currentRotation + 120 : currentRotation - 120;
+        useForwardRotation = currentSection === 'education';
+        newMaxHeight = '320';
         break;
       case 'education':
-        newRotation = currentSection === 'employment' ? currentRotation + 120 : currentRotation - 120;
+        useForwardRotation = currentSection === 'employment';
+        newMaxHeight = '220';
         break;
       case 'employment':
-        newRotation = currentSection === 'bio' ? currentRotation + 120 : currentRotation - 120;
+        useForwardRotation = currentSection === 'bio';
+        newMaxHeight = '410';
         break;
     }    
 
+    const newRotation = useForwardRotation ? currentRotation + 120 : currentRotation - 120
     setCurrentSection(newSection);
     setCurrentRotation(newRotation);
     rightContainerRef.current.style.transform = `${baseTransform} rotate(${newRotation}deg)`;
+    bioContainerRef.current.style.maxHeight = educationContainerRef.current.style.maxHeight =
+      employmentContainerRef.current.style.maxHeight = `${newMaxHeight}px`;
   }
   
   return (
@@ -59,7 +72,7 @@ export default function About() {
           </div>
           <div ref={rightContainerRef as LegacyRef<HTMLDivElement>} className={`${styles.rightContainer}`}>
             <div className={styles.sectionWrapper}>
-              <div className={styles.sectionContainer}>
+              <div ref={bioContainerRef as LegacyRef<HTMLDivElement>} className={styles.sectionContainer}>
                 Here is the Bio. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                 <br/>
                 <br/>
@@ -67,7 +80,7 @@ export default function About() {
               </div>
             </div>
             <div className={styles.sectionWrapper}>
-              <div className={styles.sectionContainer}>
+              <div ref={educationContainerRef as LegacyRef<HTMLDivElement>} className={styles.sectionContainer}>
                 <h3>Degree name</h3>
                 <br/>
                 <h4>Universtity name - Grade</h4>
@@ -77,7 +90,7 @@ export default function About() {
               </div>
             </div>
             <div className={styles.sectionWrapper}>
-              <div className={styles.sectionContainer}>
+              <div ref={employmentContainerRef as LegacyRef<HTMLDivElement>} className={styles.sectionContainer}>
                 Here is the Employment. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                 <br/>
                 <br/>

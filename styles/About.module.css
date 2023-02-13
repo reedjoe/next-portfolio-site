@@ -97,7 +97,7 @@
     }
 }
 
-@keyframes rotation {
+/* @keyframes rotation {
     0%, 5% {
         transform: var(--_t) rotate(0deg);
     }
@@ -110,7 +110,7 @@
     94%, 100% {
         transform: var(--_t) rotate(360deg);
     }
-}
+} */
 
 .rightContainer > div {
     grid-area: 1 / 1;
@@ -144,10 +144,12 @@
     padding: 20px;
     overflow: hidden;
     /* animation: height 14s cubic-bezier(0.5, -0.2, 0.5, 1.2) infinite; */
+    transition: all cubic-bezier(0.5, -0.2, 0.5, 1.2) 1.5s;
     height: 100%;
+    max-height: 320px;
 }
 
-@keyframes height {
+/* @keyframes height {
     0%, 5% {
         max-height: 320px;
     }
@@ -160,4 +162,4 @@
     94%, 100% {
         max-height: 320px;
     }
-}
+} */
