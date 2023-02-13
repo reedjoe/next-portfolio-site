@@ -20,6 +20,10 @@ export default function About() {
       return;
     }
 
+    if (newSection === currentSection) {
+      return;
+    }
+
     let useForwardRotation;
     let newMaxHeight;
     switch (newSection) {
