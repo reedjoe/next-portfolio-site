@@ -11,7 +11,7 @@ export default function About() {
   const [currentRotation, setCurrentRotation] = useState(0);
   const baseTransform = 'perspective(2000px) rotateX(-90deg) rotate(180deg) scaleX(-1)';
   
-  //TODO: refactor this ugly shit, and add some CSS to indicate which section is selected
+  //TODO: fix mobile view
   const setSection = (newSection: string) => {
     if (!rightContainerRef?.current ||
       !bioContainerRef?.current ||
@@ -55,19 +55,19 @@ export default function About() {
         <div className={styles.container}>
           <div className={styles.leftContainer}>
             {/* TODO: look at https://codepen.io/nikolamitic/pen/vpNoNq */}
-            <div className={styles.sectionLink} onClick={() => setSection('bio')}>
+            <div className={`${styles.sectionLink} ${currentSection === 'bio' ? styles.activeSection : ''}`} onClick={() => setSection('bio')}>
               <span className={styles.sectionLinkStatic}>Bio</span>
               <div className={styles.sectionLinkDynamic}>
                 <span className={styles.sectionLinkDynamicInner}>Bio</span>
               </div>
             </div>
-            <div className={styles.sectionLink} onClick={() => setSection('employment')}>
+            <div className={`${styles.sectionLink} ${currentSection === 'employment' ? styles.activeSection : ''}`} onClick={() => setSection('employment')}>
               <span className={styles.sectionLinkStatic}>Employment</span>
               <div className={styles.sectionLinkDynamic}>
                 <span className={styles.sectionLinkDynamicInner}>Employment</span>
               </div>
             </div>
-            <div className={styles.sectionLink} onClick={() => setSection('education')}>
+            <div className={`${styles.sectionLink} ${currentSection === 'education' ? styles.activeSection : ''}`} onClick={() => setSection('education')}>
               <span className={styles.sectionLinkStatic}>Education</span>
               <div className={styles.sectionLinkDynamic}>
                 <span className={styles.sectionLinkDynamicInner}>Education</span>
