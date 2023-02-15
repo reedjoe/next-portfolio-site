@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.projectContainer {
+.projectList .projectContainer:not(:first-child) {
   margin-top: 30px;
 }
 
