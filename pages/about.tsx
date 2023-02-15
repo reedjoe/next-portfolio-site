@@ -11,7 +11,6 @@ export default function About() {
   const [currentRotation, setCurrentRotation] = useState(0);
   const baseTransform = 'perspective(2000px) rotateX(-90deg) rotate(180deg) scaleX(-1)';
   
-  //TODO: fix mobile view
   const setSection = (newSection: string) => {
     if (!rightContainerRef?.current ||
       !bioContainerRef?.current ||
@@ -49,12 +48,12 @@ export default function About() {
       employmentContainerRef.current.style.maxHeight = `${newMaxHeight}px`;
   }
   
+  {/* see https://codepen.io/nikolamitic/pen/vpNoNq for the CSS for the section links*/}
   return (
     <>
       <Layout pageTitle='Portfolio - About'>
         <div className={styles.container}>
           <div className={styles.leftContainer}>
-            {/* TODO: look at https://codepen.io/nikolamitic/pen/vpNoNq */}
             <div className={`${styles.sectionLink} ${currentSection === 'bio' ? styles.activeSection : ''}`} onClick={() => setSection('bio')}>
               <span className={styles.sectionLinkStatic}>Bio</span>
               <div className={styles.sectionLinkDynamic}>
